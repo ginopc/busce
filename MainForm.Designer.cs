@@ -1,4 +1,4 @@
-﻿namespace RAPIDemo
+﻿namespace BusCE
 {
     partial class MainForm
     {
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.DeviceStatus = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -42,6 +43,9 @@
             this.btnRemotePath = new System.Windows.Forms.Button();
             this.btnGetFiles = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.statusImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.statusImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,9 +60,10 @@
             // DeviceStatus
             // 
             this.DeviceStatus.AutoSize = true;
-            this.DeviceStatus.Location = new System.Drawing.Point(104, 13);
+            this.DeviceStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeviceStatus.Location = new System.Drawing.Point(133, 13);
             this.DeviceStatus.Name = "DeviceStatus";
-            this.DeviceStatus.Size = new System.Drawing.Size(79, 13);
+            this.DeviceStatus.Size = new System.Drawing.Size(94, 13);
             this.DeviceStatus.TabIndex = 1;
             this.DeviceStatus.Text = "Non disponibile";
             // 
@@ -137,9 +142,9 @@
             // 
             // btnGetFiles
             // 
-            this.btnGetFiles.Location = new System.Drawing.Point(106, 141);
+            this.btnGetFiles.Location = new System.Drawing.Point(16, 114);
             this.btnGetFiles.Name = "btnGetFiles";
-            this.btnGetFiles.Size = new System.Drawing.Size(75, 23);
+            this.btnGetFiles.Size = new System.Drawing.Size(453, 57);
             this.btnGetFiles.TabIndex = 10;
             this.btnGetFiles.Text = "Ricevi Files";
             this.btnGetFiles.UseVisualStyleBackColor = true;
@@ -147,16 +152,34 @@
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(187, 141);
+            this.progressBar.Location = new System.Drawing.Point(213, 88);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(282, 23);
+            this.progressBar.Size = new System.Drawing.Size(256, 20);
             this.progressBar.TabIndex = 11;
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "led-wait.png");
+            this.imageList.Images.SetKeyName(1, "led-on.png");
+            this.imageList.Images.SetKeyName(2, "led-off.png");
+            // 
+            // statusImage
+            // 
+            this.statusImage.Location = new System.Drawing.Point(107, 9);
+            this.statusImage.Name = "statusImage";
+            this.statusImage.Size = new System.Drawing.Size(20, 20);
+            this.statusImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.statusImage.TabIndex = 12;
+            this.statusImage.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 176);
+            this.ClientSize = new System.Drawing.Size(482, 177);
+            this.Controls.Add(this.statusImage);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnGetFiles);
             this.Controls.Add(this.btnRemotePath);
@@ -169,9 +192,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DeviceStatus);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "BusCE";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.statusImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,6 +220,8 @@
         private System.Windows.Forms.Button btnRemotePath;
         private System.Windows.Forms.Button btnGetFiles;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.PictureBox statusImage;
     }
 }
 

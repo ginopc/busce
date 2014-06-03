@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 using OpenNETCF.Desktop.Communication;
 
-namespace RAPIDemo
+namespace BusCE
 {
     class DeviceCE
     {

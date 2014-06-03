@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 using OpenNETCF.Desktop.Communication;
 
-namespace RAPIDemo
+namespace BusCE
 {
     public partial class MainForm : Form
     {
@@ -32,6 +32,7 @@ namespace RAPIDemo
         private void Form1_Load(object sender, EventArgs e)
         {
             // Abilito il check continuo dello stato del terminale
+            statusImage.Image = imageList.Images[0];
             timer1.Enabled = true;
             myRapi = new RAPI();
         }
@@ -42,12 +43,13 @@ namespace RAPIDemo
             {
                 DeviceStatus.Text = "CONNESSO";
                 btnGetFiles.Enabled = true;
-
+                statusImage.Image = imageList.Images[1]; // led verde
             }
             else
             {
                 DeviceStatus.Text = "NON CONNESSO";
                 btnGetFiles.Enabled = false;
+                statusImage.Image = imageList.Images[2];
             }
         }
 

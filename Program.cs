@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace RAPIDemo
+namespace BusCE
 {
     static class Program
     {
@@ -17,6 +17,10 @@ namespace RAPIDemo
             if (args.Length == 3)
             {
                 Console.WriteLine("Ci sono {0} parametri", args.Length);
+                for (int i=0; i<args.Length; i++)
+                {
+                    Console.WriteLine("parametro {0}: {1}", i, args[i]);
+                }
                 DeviceCE device = new DeviceCE();
 
                 // recupera i paramenti passati
@@ -55,7 +59,6 @@ namespace RAPIDemo
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new MainForm());
-
                 result = 0;
             }
 
