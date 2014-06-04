@@ -1,19 +1,24 @@
-=======
- BusCE
-=======
+BusCE
+=====
 
-*** Release 0.0.2 del 03/06/2014 ***
-Aggiunta icona di stato disponibilità terminale
-Modifica dell'interfaccia grafica.
+Applicaione di ricezione file da terminale con Windows CE
+Puo' essere avviata sia senza parametri (GUI) che con parametri.
 
-*** Release 0.0.1 del 19/05/2014 ***
-Release di partenza. L'applicazione è stata testata con i seguenti terminali:
+** Avvio senza parametri** 
+In questo caso viene aperta l'interfaccia Windows dove è possibile inserire i valori per i parametri
+e avviare la ricezione dei file.
 
- - Motorola Symbol MC3070
- - Motorola Symbol MC3090
- - Datalogic Skorpio
+** Avvio con parametri **
+In questo caso non viene mostrata nessuna interfaccia visuale e l'applicazione esegue la ricezione
+senza la necessità di internvento da parte dell'utente.
+Questa modalità può essere utile come modulo di un altra applicazione.
 
-e con i seguenti applicativi di comunicazione:
 
- - Microsoft ActiveSync 4.5
- - Miscrosoft Windows Mobile
+** Parametri Applicazione **
+-lp	Local Path    : è il percorso dove verranno salvati i file ricevuti dal terminale
+-rp	Remote Path   : percorso sul terminalino dove devono essere cercati i file
+-rf	Remote Filter : filtro di ricerca dei file
+
+Nel nostro caso si chiamera' l'applicazione con:
+
+BusCE.exe -lp=c:\scs\ordini -rp=\ -rf=ord*.txt
