@@ -1,7 +1,7 @@
 BusCE
 =====
 
-Applicaione di ricezione file da terminale con Windows CE
+Applicazione di ricezione file da terminale con Windows CE
 Puo' essere avviata sia senza parametri (GUI) che con parametri.
 
 ** Avvio senza parametri** 
