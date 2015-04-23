@@ -105,7 +105,9 @@ namespace BusCE
 
         private void btnLocalPath_Click(object sender, EventArgs e)
         {
-            LocalPath.Text = findPath();
+            string filePath = findPath();
+            if ((filePath.Length > 0) && (filePath != LocalPath.Text))
+                LocalPath.Text = filePath;
         }
 
         private string findPath()
@@ -125,7 +127,9 @@ namespace BusCE
 
         private void btnRemotePath_Click(object sender, EventArgs e)
         {
-            RemotePath.Text = findPath();
+            string filePath = findPath();
+            if ((filePath.Length > 0) && (filePath != LocalPath.Text))
+                RemotePath.Text = filePath;
         }
     }
 }
