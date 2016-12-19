@@ -1,6 +1,6 @@
 # BusCE: Receive files from Microsoft Windows CE PdAs
 
-<a href="http://www.ginopc.it">Author WebSite</a>
+<a href="http://www.ginopc.it"><img src="http://github.com/ginopc/busce/res/tree_logo.png">Author WebSite</a>
 
 **BusCE** is a Microsoft Windows app developed in C#. It is a tool for receive files from a WinCE PdA (Portable Digital Assistant) like a Motorola Symbol terminal.
 You can start BusCE either with or without parameters. First option is also known as <i>Ghost Mode</i>, second option is knows as <i>GUI Mode</i>.
