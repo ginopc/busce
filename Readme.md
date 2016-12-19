@@ -14,10 +14,12 @@ It's a start without parameters. On this case the graphical interface is not sho
 This mode can be used as a module from another application.
 
 ## Command Line Parameters
--lp	Local Path    : path where the files receiced from PdA are saved
--rp	Remote Path   : path on PdA where source files are searched
--rf	Remote Filter : file's search filter
+<ul>
+  <li>-lp	Local Path    : path where the files receiced from PdA are saved</li>
+  <li>-rp	Remote Path   : path on PdA where source files are searched</li>
+  <li>-rf	Remote Filter : file's search filter</li>
+</ul>
 
 Follows an exemple of Ghost Mode:
 ```html
-BusCE.exe -lp=c:\scs\ordini -rp=\ -rf=ord*.txt
+BusCE.exe -lp=c:\busce\in -rp=\data -rf=out_*.txt
