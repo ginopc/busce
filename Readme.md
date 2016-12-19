@@ -7,20 +7,17 @@ You can start BusCE either with or without parameters. First option is also know
 
 
 ## GUI Mode
-In questo caso viene aperta l'interfaccia Windows dove è possibile inserire i valori per i parametri
-e avviare la ricezione dei file.
+Without start parameters the application shows his graphical interface. You can insert values on fields and starts file reception.
 
 ## Ghost Mode
-In questo caso non viene mostrata nessuna interfaccia visuale e l'applicazione esegue la ricezione
-senza la necessità di internvento da parte dell'utente.
-Questa modalità può essere utile come modulo di un altra applicazione.
+It's a start without parameters. On this case the graphical interface is not shown. The application execute data transfer without need of user interaction.
+This mode can be used as a module from another application.
 
+## Command Line Parameters
+-lp	Local Path    : path where the files receiced from PdA are saved
+-rp	Remote Path   : path on PdA where source files are searched
+-rf	Remote Filter : file's search filter
 
-** Parametri Applicazione **
--lp	Local Path    : è il percorso dove verranno salvati i file ricevuti dal terminale
--rp	Remote Path   : percorso sul terminalino dove devono essere cercati i file
--rf	Remote Filter : filtro di ricerca dei file
-
-Nel nostro caso si chiamera' l'applicazione con:
-
+Follows an exemple of Ghost Mode:
+```html
 BusCE.exe -lp=c:\scs\ordini -rp=\ -rf=ord*.txt
